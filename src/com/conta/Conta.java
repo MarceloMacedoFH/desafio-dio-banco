@@ -10,15 +10,16 @@ public abstract class Conta implements IConta {
     protected int conta;
     protected double saldo;
     protected Clientes cliente;
+    //protected Clientes cliente;
 
     //Construtor 
     public Conta(Clientes cliente){
-        this.agencia = Agencia_Padrao;        
+        this.agencia = Agencia_Padrao;
         this.conta = Conta_Padrao++;
         this.cliente = cliente;
     }
 
-        //Metodos
+    //Metodos
     @Override
     public void sacar(double valor) {
         try {

@@ -1,9 +1,21 @@
 package com.cliente;
 public class Clientes {
 
-    public String nome;
+    private static int Id_Padrao = 1;
+    private int id; 
+    private String nome;
+
+    //Construtor
+    public Clientes(String nome){
+        this.id   = Id_Padrao++;
+        this.nome = nome;
+    }
 
     //Geters e Setters 
+
+    public int getId(){
+        return id;
+    }
 
     public String getNome(){
         return nome;
@@ -12,6 +24,8 @@ public class Clientes {
     public void setNome(String nome){
         this.nome = nome;
     }
+
+
 
 
 }

@@ -7,18 +7,13 @@ import com.conta.ContaPoupanca;
 public class Main {
 
     public static void main(String[] args) {
-        Clientes cli1 = new Clientes();
-        cli1.setNome("Marcelo");
 
-        Clientes cli2 = new Clientes();
-        cli2.setNome("Maria");
+        //Cadastrando Cliente
+        Clientes cli = new Clientes("Marcelo");
 
-        ContaCorrente ccCli1 = new ContaCorrente(cli1);
-        ContaPoupanca cpCli1 = new ContaPoupanca(cli1);
-
-        ContaCorrente ccCli2 = new ContaCorrente(cli2);
-        ContaPoupanca cpCli2 = new ContaPoupanca(cli2);
-
+        //Cadastrando contas 
+        ContaCorrente ccCli1 = new ContaCorrente(cli);
+        ContaPoupanca cpCli1 = new ContaPoupanca(cli);
         
         //Cliente 1
         ccCli1.depositar(100);
@@ -32,17 +27,7 @@ public class Main {
          
         System.out.println();
 
-        //Cliente 2
 
-        ccCli2.depositar(300);
-        ccCli2.imprimirExtrato();
-        cpCli2.imprimirExtrato();
-        System.out.println();
-
-        ccCli2.transferir(200, cpCli2);
-        ccCli2.imprimirExtrato();
-        cpCli2.imprimirExtrato();
-        
     }
 
     
